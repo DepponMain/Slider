@@ -10,6 +10,8 @@
 #import "ProgressLine.h"
 
 #define Margin 20
+#define LineHeight 5
+#define ProgressHight 40
 
 @interface ViewController ()
 
@@ -31,15 +33,15 @@
     
     ProgressLine *line = [[ProgressLine alloc] init];
     self.line = line;
-    line.frame = CGRectMake(Margin, 100, [UIScreen mainScreen].bounds.size.width - 2 * Margin, 40);
+    line.frame = CGRectMake(Margin, 100, [UIScreen mainScreen].bounds.size.width - 2 * Margin, ProgressHight);
     line.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:line];
     
-    UIView *dark = [[UIView alloc] initWithFrame:CGRectMake(line.bounds.origin.x + Margin, line.bounds.origin.y, line.bounds.size.width - 2 * Margin, 5)];
+    UIView *dark = [[UIView alloc] initWithFrame:CGRectMake(line.bounds.origin.x + Margin, line.bounds.origin.y, line.bounds.size.width - 2 * Margin, LineHeight)];
     dark.backgroundColor = [UIColor lightGrayColor];
-    dark.layer.cornerRadius = 5;
+    dark.layer.cornerRadius = LineHeight / 2;
     dark.layer.masksToBounds = YES;
-    dark.alpha = 0.1;
+    dark.alpha = 0.07;
     [line addSubview:dark];
     
 }
