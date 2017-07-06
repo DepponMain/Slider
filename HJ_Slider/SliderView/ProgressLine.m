@@ -30,10 +30,26 @@
  *  Layer(线)
  */
 @property (nonatomic, strong) CAGradientLayer *lineLayer;
+/**
+ *  底部darkView
+ */
+@property (nonatomic, weak) UIView *dark;
 
 @end
 
 @implementation ProgressLine
+
+- (void)layoutSubviews{
+    if (!_dark) {
+        UIView *dark = [[UIView alloc] initWithFrame:CGRectMake(self.bounds.origin.x + Margin, self.bounds.origin.y, self.bounds.size.width - 2 * Margin, LineHeight)];
+        _dark = dark;
+        dark.backgroundColor = [UIColor lightGrayColor];
+        dark.layer.cornerRadius = LineHeight / 2;
+        dark.layer.masksToBounds = YES;
+        dark.alpha = 0.07;
+        [self addSubview:dark];
+    }
+}
 
 - (void)drawRect:(CGRect)rect{
     self.lineLayer.frame = CGRectMake(self.bounds.origin.x + Margin, self.bounds.origin.y, (self.bounds.size.width - 2 * Margin) * _lineCurrentValue / 100, LineHeight);
