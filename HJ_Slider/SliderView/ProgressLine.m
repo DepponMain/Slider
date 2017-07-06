@@ -125,6 +125,5 @@
 -(void)dealloc{
     [self.link invalidate];
     self.link = nil;
-    NSLog(@"dealloc");
 }
 @end

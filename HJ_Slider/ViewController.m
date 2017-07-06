@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "ProgressLine.h"
 
+#define Margin 20
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *score;
@@ -29,11 +31,11 @@
     
     ProgressLine *line = [[ProgressLine alloc] init];
     self.line = line;
-    line.frame = CGRectMake(20, 100, [UIScreen mainScreen].bounds.size.width - 40, 40);
+    line.frame = CGRectMake(Margin, 100, [UIScreen mainScreen].bounds.size.width - 2 * Margin, 40);
     line.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:line];
     
-    UIView *dark = [[UIView alloc] initWithFrame:CGRectMake(line.bounds.origin.x + 20, line.bounds.origin.y, line.bounds.size.width - 40, 5)];
+    UIView *dark = [[UIView alloc] initWithFrame:CGRectMake(line.bounds.origin.x + Margin, line.bounds.origin.y, line.bounds.size.width - 2 * Margin, 5)];
     dark.backgroundColor = [UIColor lightGrayColor];
     dark.layer.cornerRadius = 5;
     dark.layer.masksToBounds = YES;
