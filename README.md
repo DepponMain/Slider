@@ -13,3 +13,10 @@
 最终效果如下 ↓
 
 ![](https://github.com/DepponMain/Slider/blob/master/Slider.gif)
+
+* 可下载Demo查看完整代码，如有纰漏，欢迎指正--QQ：2779713120
+
+
+<div class="footer">
+	&copy; 2017/7/6 HJ.M
+</div>
