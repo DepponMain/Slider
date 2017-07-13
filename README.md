@@ -15,6 +15,7 @@
 
 ![](https://github.com/DepponMain/Slider/raw/master/GIF/Slider.gif)
 
+---
 ##### *可下载Demo查看完整代码，如有纰漏，欢迎指正*
 ## 联系方式
 * QQ：2779713120
